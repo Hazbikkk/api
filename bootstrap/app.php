@@ -15,11 +15,6 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware): void {
 
-        $middleware->alias(
-            [
-                'api:throttle' => \Illuminate\Routing\Middleware\SubstituteBindings::class
-            ]
-            );
 
         // не обязательно :((((
         $middleware->alias([
